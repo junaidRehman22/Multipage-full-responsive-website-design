@@ -1,0 +1,568 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(./eduford_img/banner.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0vw 7vw;
+}
+
+.logo img {
+  width: 12vw;
+  height: 8vh;
+  cursor: pointer;
+}
+
+.nav-part {
+  /* background-color: aquamarine; */
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
+
+.nav-part a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.nav-part a::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid crimson;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.nav-part a:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-part i {
+  display: none;
+}
+
+/* ##################### HERO-TEXT STYLING ###########################  */
+.hero {
+  height: calc(100% - 100px);
+  /* background-color: aquamarine; */
+  position: relative;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-text h1 {
+  white-space: nowrap;
+  font-size: 4.5vw;
+  font-weight: 600;
+  color: #fff;
+  /* background-color: bisque; */
+}
+
+.hero-text p {
+  /* background-color: blueviolet; */
+  width: 70%;
+  font-size: 1vw;
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.8vw;
+  margin-bottom: 2.5vw;
+}
+
+.hero-text .hero-btn {
+  margin: 0px auto;
+  text-align: center;
+  /* background-color: aquamarine; */
+}
+
+.hero-text a button {
+  padding: 0.8vw 2vw;
+  font-size: 0.9vw;
+  border-radius: 0.3vw;
+  background-color: transparent;
+  border: 2px solid #858484;
+  color: #fff;
+  transition: background-color 2s ease;
+}
+
+.hero-text a button:hover {
+  background-color: rgb(249, 85, 25);
+}
+
+/* ################# COURSE SECTION STYLING ################################ */
+.courses {
+  /* height: 90%; */
+  width: 100%;
+  background-color: #fff;
+  padding: 5vw 4vw;
+  text-align: center;
+}
+
+.courses h1.courses-text {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.courses p.courses-para {
+  font-size: 0.9vw;
+  color: #666;
+  text-align: center;
+}
+
+.courses .courses-part2 {
+  margin-top: 4vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.courses .courses-part2 .card {
+  flex-basis: 31%;
+  padding: 1.2vw 2vw;
+  background-color: blanchedalmond;
+  border-radius: 0.8vw;
+  transition: box-shadow 0.3s ease;
+}
+
+.courses-part2 .card h3 {
+  margin-bottom: 1em;
+}
+
+.courses-part2 .card p {
+  font-size: 0.9em;
+}
+
+.courses-part2 .card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ######################### CAMPUS SECTION STYLING ################################# */
+.campus {
+  width: 100%;
+  padding: 3vw 4vw;
+}
+
+.campus h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.campus p {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+}
+
+.campus-col {
+  flex-basis: 30%;
+  text-align: center;
+  margin-bottom: 5%;
+  border-radius: 0.5vw;
+  position: relative;
+}
+
+.campus-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5vw;
+}
+
+.campus-col .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5vw;
+  transition: 0.4s ease;
+}
+
+.layer:hover {
+  background-color: rgba(190, 123, 98, 0.427);
+}
+
+.layer h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  transform:translate(-50%);
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.campus-col:hover h3{
+  opacity: 1;
+  bottom: 50%;
+}
+
+/* ################### FACILITY SECTION STYLING ############################## */
+section.facility{
+  width: 100%;
+  /* height: 100%; */
+  /* border: 2px solid red; */
+  padding: 1.5vw 4vw;
+}
+
+.facility h1{
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
+.facility p{
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.facility .row-part2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.row-part2 .column-part2{
+  border-radius:1.2rem;
+flex-basis: 30%;
+}
+
+.column-part2 h3{
+  margin: 0.6rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.row-part2 .column-part2 #para{
+  font-size: 0.8rem;
+  text-align: left;
+  width: 90%;
+}
+
+.column-part2 img{
+  border-radius:1.2rem;
+  width: 100%;
+  /* height:50%; */
+  object-fit: cover;
+}
+
+/* ####################### REVIEWS SECTION STYLING ################################  */
+.reviews{
+  /* background-color: rgb(249, 245, 241); */
+  width: 100%;
+  padding: 1.5vw 4vw;
+}
+
+.reviews h1{
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.reviews p:not(.feedback-para){
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom:2.5rem;
+}
+
+.reviews .row-part3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.reviews .column-part3{
+  border-radius: 0.6rem;
+  flex-basis: 40%;
+  padding: 1.5rem 2.5rem;
+  background-color:rgb(250, 230, 206);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.column-part3 img{
+  width: 10%;
+  height: 10%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.column-part3 .feedback h4{
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600 ;
+  margin-bottom: 0.5rem;
+}
+
+.column-part3 .feedback p{
+  text-align: left;
+  font-size: 0.8rem;
+  color: #666666fa;
+  margin-bottom: 0.7rem;
+}
+
+ .feedback .icons{
+  text-align: left;
+}
+ .feedback .icons i{
+  color: orange;
+}
+
+
+/* ##################### CALL TO ACTION ########################## */
+.enrollment{
+  width: 100%;
+  /* background-color: beige; */
+  height:80%;
+  padding: 1.5vw 4vw;
+}
+
+.enrollment .enroll-now{
+  margin: 4rem auto;
+  width: 80%;
+  height: 55%;
+  border-radius: 0.7rem;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url(./eduford_img/banner2.jpg);
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+.enroll-now h1{
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.enroll-now button{
+  padding: 0.7rem 2rem;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+
+/* ##################### FOOTER SECTION STYLING ####################### */
+.footer{
+  width: 100%;  
+  padding: 2rem 4rem;
+  text-align: center;
+}
+
+.footer-comp{
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer-comp h3{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.footer-comp p{
+  /* width: 70%; */
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 1.2rem;
+}
+
+.footer-icons{
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer-icons i{
+  font-size: 1.2rem;
+  color: orangered;
+  font-weight: 900;
+}
+
+/* ####################### MEDIA QUERY STYLING ##################### */
+@media (max-width: 700px) {
+  nav .logo img {
+    width: 70%;
+    height: 100%;
+  }
+
+  .nav-part a {
+    display: none;
+  }
+
+  nav .nav-part i {
+    display: block;
+    font-size: 4vw;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* ############## Hero section ############## */
+  .hero-text h1 {
+    font-size: 7vw;
+  }
+
+  .hero-text p {
+    font-size: 2.5vw;
+    width: 95%;
+    margin-bottom: 7vw;
+  }
+
+  .hero-text a button {
+    font-size: 3.5vw;
+    padding: 1.3vw 2vw;
+  }
+
+  /* ############### Courses section #################### */
+
+  .courses h1.courses-text {
+    font-size:2.5rem;
+  }
+
+  .courses p.courses-para {
+    font-size: 0.7rem;
+  }
+
+  .courses-part2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .courses-part2 .card h3{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+  }
+
+  .courses-part2 .card {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+
+  .courses-part2 .card p {
+    font-size: .8rem;
+  }
+
+  /* ############# Campus section ############# */
+  .campus h1{
+    font-size: 2.5rem;
+  }
+
+  .campus p{
+    font-size: 0.8rem;
+  }
+
+  .campus-col{
+    width: 80vw;
+    margin: 0 auto;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+
+  /* ############ Facility section #############  */
+  .facility h1{
+    font-size: 2.5rem;
+  }
+
+  .facility .row-part2{
+    /* width: 100%; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+/* ################ Review section ############### */
+  .reviews h1{
+    font-size: 2.5rem;
+  }
+
+  .reviews .column-part3{
+    gap: 1.2rem;
+    padding: 1.3rem 1.2rem;
+  }
+
+.row-part3{
+  flex-direction: column;
+}
+
+  .column-part3 img{
+    object-fit: cover;
+  }
+
+  /* ############ Call TO Action #########  */
+  .enrollment .enroll-now{
+    width: 100%;
+    height: 100%;
+  }
+
+  .enroll-now h1{
+    font-size: 1.5rem;
+  }
+
+  /* ####### Footer Section ########  */
+  .footer{
+    margin-top: 4rem;
+  }
+
+}
